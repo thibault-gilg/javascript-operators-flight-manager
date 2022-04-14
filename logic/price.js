@@ -5,9 +5,10 @@ const { base } = require("mocha/lib/reporters");
 function Prices() {
 
     function calculateFinalPrice(basePrice, variationPassenger, variationFlight) {
-        let finalPrice = basePrice + (variationPassenger*basePrice/100);
-        finalPrice *= (1 + variationFlight/100);
-        return Math.round(100*finalPrice)/100;
+        let finalPrice = basePrice;
+        finalPrice *= 1 + variationPassenger/100;
+        finalPrice *= 1 + variationFlight/100;
+        return finalPrice.toFixed(2);
     }
 
     function calculateDefaultFinalPrice(basePrice, passengerType, flightType) {

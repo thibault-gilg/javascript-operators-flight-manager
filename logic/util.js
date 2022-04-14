@@ -19,7 +19,7 @@ function Util() {
 
     function checkInput(input) {
         if (input.isEmpty() || input.isNaN()) {
-            throw new Error("");
+            throw new Error("Incorrect values");
         }
     }
 
