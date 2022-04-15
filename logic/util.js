@@ -4,7 +4,9 @@ function Util() {
 
     function calculateTotalDistributedPassengers(planePassengers) {
         let totalPassengers = 0;
-        for (const key in planePassengers) {
+        let key;
+        
+        for ( key in planePassengers) {
             totalPassengers += planePassengers[key];
         }
     }
