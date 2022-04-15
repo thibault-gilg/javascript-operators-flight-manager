@@ -15,17 +15,17 @@ function Prices() {
         let variationPassenger = 0;
         let variationFlight = 0;
         if (passengerType.toUpperCase() === "REGULAR") {
-            let variationPassenger = -5;
+            variationPassenger = -5;
         }
         else {
-            let variationPassenger = 5;
+            variationPassenger = 5;
         }
 
         if (flightType.toUpperCase() === "ECONOMY") {
-            let variationFlight = -3;
+            variationFlight = -3;
         }
         else {
-            let variationFlight = 10; 
+            variationFlight = 10; 
         }
 
         return calculateFinalPrice(basePrice, variationPassenger, variationFlight);
